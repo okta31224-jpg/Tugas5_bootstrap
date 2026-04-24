@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FASHION</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="mainHeader">
+        <div class="top-bar py-2 text-center text-white small">
+            FREE SHIPPING ON ORDERS OVER $75 | EASY RETURNS
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top border-bottom">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#">AUL-STORE</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto text-uppercase fw-semibold small">
+                        <li class="nav-item"><a class="nav-link px-3" href="#hero">Home</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="#shop">Shop</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="#arrivals">Arrivals</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="#collections">Collections</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link px-3 text-danger" href="#discount">Discount</a></li>
+                    </ul>
+                    <div class="nav-icons d-flex align-items-center gap-3">
+                        <div class="search-box d-none d-md-block">
+                            <input type="text" class="form-control form-control-sm rounded-pill" placeholder="Search...">
+                        </div>
+                        <a href="#"><i class="fa-regular fa-user"></i></a>
+                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                        <a href="#" class="position-relative">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            <span class="badge-count">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <header id="hero" class="hero-section py-5">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-5 ps-lg-5">
+                    <h1 class="display-3 fw-bold serif mb-3">ABOUT</h1>
+                    <p class="text-muted mb-4">AUL-STORE bukan sekedar tren tapi standar baru dalam bergaya. Kami menghadirkan koleksi eksklusif yang memadukan kualitas premium dengan desain minimalis, dirancang khusus untuk anda yang berani beda. Karena di sini, kemewahan sejati adalah kenyamanan menjadi diri sendiri.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <button id="btn-shop-new" class="btn btn-dark px-4 py-2 rounded-pill">SHOP NEW IN</button>
+                        <button id="btn-explore" class="btn btn-outline-dark px-4 py-2 rounded-pill">EXPLORE COLLECTIONS</button>
+                    </div>
+                </div>
+                <div class="col-lg-7 text-end">
+                    <img src="asset/slide1.jpeg" alt="Model" class="img-fluid rounded shadow-lg hero-img">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="bg-light border-bottom py-5">
+        <div class="container">
+            <div class="row text-center g-4">
+                <div class="col-6 col-md-3 border-end feature-item" id="feat-shipping">
+                    <i class="fa-solid fa-truck-fast mb-2"></i>
+                    <p class="small mb-0 fw-bold">FREE SHIPPING</p>
+                    <p class="text-muted extra-small">On orders over $75</p>
+                </div>
+
+                <div class="col-6 col-md-3 border-end feature-item" id="feat-returns">
+                    <i class="fa-solid fa-rotate-left mb-2"></i>
+                    <p class="small mb-0 fw-bold">EASY RETURNS</p>
+                    <p class="text-muted extra-small">30-day return policy</p>
+                </div>
+
+                <div class="col-6 col-md-3 border-end feature-item" id="feat-payment">
+                    <i class="fa-solid fa-lock mb-2"></i>
+                    <p class="small mb-0 fw-bold">SECURE PAYMENT</p>
+                    <p class="text-muted extra-small">100% secure checkout</p>
+                </div>
+
+                <div class="col-6 col-md-3 feature-item" id="feat-stores">
+                    <i class="fa-solid fa-location-dot mb-2"></i>
+                    <p class="small mb-0 fw-bold">STORES NEAR YOU</p>
+                    <p class="text-muted extra-small">Find a C-Style store</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="shop" class="container py-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h5 class="fw-bold text-uppercase mb-0">Shop by Category</h5>
+        <div class="d-flex align-items-center gap-3">
+            <button class="btn btn-sm btn-outline-dark rounded-circle scroll-btn" onclick="scrollCategory('left')">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="btn btn-sm btn-outline-dark rounded-circle scroll-btn" onclick="scrollCategory('right')">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <div id="category-container" class="row text-center g-4 flex-nowrap overflow-hidden p-2" style="scroll-behavior: smooth;">
+        <div class="col-4 col-md-2 category-item">
+            <div class="category-circle mx-auto mb-2"><img src="asset/slide2.jpeg"></div>
+            <p class="small">Baju</p>
+        </div>
+        <div class="col-4 col-md-2 category-item">
+            <div class="category-circle mx-auto mb-2"><img src="asset/slide3.jpeg"></div>
+            <p class="small">Celana</p>
+        </div>
+        <div class="col-4 col-md-2 category-item">
+            <div class="category-circle mx-auto mb-2"><img src="asset/slide4.jpeg"></div>
+            <p class="small">Dress</p>
+        </div>
+        <div class="col-4 col-md-2 category-item">
+            <div class="category-circle mx-auto mb-2"><img src="asset/slide5.jpeg"></div>
+            <p class="small">Rok</p>
+        </div>
+        <div class="col-4 col-md-2 category-item">
+            <div class="category-circle mx-auto mb-2"><img src="asset/slide6.jpeg"></div>
+            <p class="small">Sepatu</p>
+        </div>
+        <div class="col-4 col-md-2 category-item">
+            <div class="category-circle mx-auto mb-2"><img src="asset/slide7.jpeg"></div>
+            <p class="small">Topi</p>
+        </div>
+        <div class="col-4 col-md-2 category-item">
+            <div class="category-circle mx-auto mb-2"><img src="asset/slide8.jpeg"></div>
+            <p class="small">Tas</p>
+        </div>
+        <div class="col-4 col-md-2 category-item">
+            <div class="category-circle mx-auto mb-2"><img src="asset/slide9.jpeg"></div>
+            <p class="small">Hils</p>
+        </div>
+        <div class="col-4 col-md-2 category-item">
+            <div class="category-circle mx-auto mb-2"><img src="asset/slide11.jpeg"></div>
+            <p class="small">Kalung</p>
+        </div>
+        <div class="col-4 col-md-2 category-item">
+            <div class="category-circle mx-auto mb-2"><img src="asset/slide12.jpeg"></div>
+            <p class="small">Gelang</p>
+        </div>
+        <div class="col-4 col-md-2 category-item">
+            <div class="category-circle mx-auto mb-2"><img src="asset/slide13.jpeg"></div>
+            <p class="small">Kacamata</p>
+        </div>
+        <div class="col-4 col-md-2 category-item">
+            <div class="category-circle mx-auto mb-2"><img src="asset/slide14.jpeg"></div>
+            <p class="small">Jam</p>
+        </div>
+        <div class="col-4 col-md-2 category-item">
+            <div class="category-circle mx-auto mb-2"><img src="asset/slide15.jpeg"></div>
+            <p class="small">Hijab</p>
+        </div>
+    </div>
+</section>
+
+    <section id="arrivals" class="bg-light py-5">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h5 class="fw-bold text-uppercase">New Arrivals</h5>
+            </div>
+            <div class="row g-4">
+                <div class="col-6 col-md-3">
+                    <div class="product-card position-relative bg-white p-2 rounded">
+                        <span class="wishlist-btn"><i class="fa-regular fa-heart"></i></span>
+                        <img src="asset/slide16.jpeg" class="img-fluid rounded mb-2">
+                        <p class="mb-0 fw-bold small">Abaya Medina atau Khadijah Abaya</p>
+                        <p class="small text-muted mb-0">$30.90</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="product-card position-relative bg-white p-2 rounded">
+                        <span class="wishlist-btn"><i class="fa-regular fa-heart"></i></span>
+                        <img src="asset/slide17.jpeg" class="img-fluid rounded mb-2">
+                        <p class="mb-0 fw-bold small">Gamis Floral Ruffle</p>
+                        <p class="small text-muted mb-0">$35.50</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="product-card position-relative bg-white p-2 rounded">
+                        <span class="wishlist-btn"><i class="fa-regular fa-heart"></i></span>
+                        <img src="asset/slide18.jpeg" class="img-fluid rounded mb-2">
+                        <p class="mb-0 fw-bold small">Abaya Dress</p>
+                        <p class="small text-muted mb-0">$40.00</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="product-card position-relative bg-white p-2 rounded">
+                        <span class="wishlist-btn"><i class="fa-regular fa-heart"></i></span>
+                        <img src="asset/slide19.jpeg" class="img-fluid rounded mb-2">
+                        <p class="mb-0 fw-bold small">Abaya Arunika</p>
+                        <p class="small text-muted mb-0">$50.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="discount" class="container py-5">
+        <div class="row g-4">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h5 class="fw-bold text-uppercase">Discount</h5>
+            </div>
+            <div class="col-md-4">
+                <div class="promo-card bg-black text-white p-5 rounded d-flex flex-column justify-content-between h-100 position-relative overflow-hidden">
+                    <div class="z-10">
+                        <p class="small text-uppercase mb-1">Students Get</p>
+                        <h2 class="display-5 fw-bold mb-3">10% OFF</h2>
+                        <p class="small text-gray-400 mb-4">Verify your student status and save more.</p>
+                        <button class="btn btn-outline-light btn-sm px-4 rounded-pill">GET DISCOUNT</button>
+                    </div>
+                    <img src="#" class="promo-bg-img opacity-50">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="promo-card bg-beige p-5 rounded h-100 d-flex flex-column justify-content-between">
+                    <div>
+                        <p class="small text-uppercase mb-1">New Season</p>
+                        <h2 class="serif h1 mb-3">NEW LOOK</h2>
+                        <p class="small text-muted mb-4">Discover the latest trends curated for you.</p>
+                        <button class="btn btn-dark btn-sm px-4 rounded-pill">SHOP NOW</button>
+                    </div>
+                    <img src="asset/slide21.jpeg" class="img-fluid mt-3 rounded">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="promo-card bg-light p-5 rounded h-100 d-flex flex-column justify-content-between border">
+                    <div>
+                        <p class="small text-uppercase mb-1">Visit Us In Store</p>
+                        <h2 class="serif h1 mb-3">FIND STORE</h2>
+                        <p class="small text-muted mb-4">Find your nearest C-Style store location.</p>
+                        <button class="btn btn-outline-dark btn-sm px-4 rounded-pill">FIND STORE</button>
+                    </div>
+                    <img src="asset/slide22.jpeg" class="img-fluid mt-3 rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="collections" class="container py-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <h5 class="fw-bold text-uppercase mb-0">Explore Collections</h5>
+                <p class="small text-muted">Handpicked styles for every vibe.</p>
+            </div>
+            <div class="d-flex gap-2">
+                <button class="btn btn-outline-dark btn-sm rounded-circle"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="btn btn-outline-dark btn-sm rounded-circle"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+        <div class="row g-3">
+            <div class="col-md-3">
+                <div class="collection-item rounded overflow-hidden position-relative">
+                    <img src="asset/slide23.jpeg" class="w-full h-100 object-cover">
+                    <div class="absolute-bottom p-3 text-white w-100 bg-gradient-dark">
+                        <p class="small mb-0">The Everyday Edit</p>
+                        <a href="#" class="extra-small text-white text-decoration-underline">SHOP NOW</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="collection-item rounded overflow-hidden position-relative">
+                    <img src="asset/slide24.jpeg" class="w-full h-100 object-cover">
+                    <div class="absolute-bottom p-3 text-white w-100 bg-gradient-dark">
+                        <p class="small mb-0">Weekend Vibes</p>
+                        <a href="#" class="extra-small text-white text-decoration-underline">SHOP NOW</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="collection-item rounded overflow-hidden position-relative">
+                    <img src="asset/slide25.jpeg" class="w-full h-100 object-cover">
+                    <div class="absolute-bottom p-3 text-white w-100 bg-gradient-dark">
+                        <p class="small mb-0">Date Night</p>
+                        <a href="#" class="extra-small text-white text-decoration-underline">SHOP NOW</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="collection-item rounded overflow-hidden position-relative">
+                    <img src="asset/slide26.jpeg" class="w-full h-100 object-cover">
+                    <div class="absolute-bottom p-3 text-white w-100 bg-gradient-dark">
+                        <p class="small mb-0">Power Office</p>
+                        <a href="#" class="extra-small text-white text-decoration-underline">SHOP NOW</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-md-6">
+                    <h2 class="serif fw-bold display-6">Loved by Fashion <br> Enthusiasts</h2>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="text-muted small">Bergabunglah dengan 10,000+ pelanggan yang telah menemukan rasa percaya diri mereka bersama AUL-STORE.</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="review-card p-4 h-100">
+                        <div class="quote-icon mb-3 text-secondary opacity-25">
+                            <i class="fa-solid fa-quote-left fs-1"></i>
+                        </div>
+                        <p class="review-text">"Bahannya tidak main-main. Saya pakai seharian untuk kerja tetap nyaman dan tidak mudah kusut. Definisi kualitas premium yang sebenarnya!"</p>
+                        <div class="d-flex align-items-center mt-4">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100" class="review-avatar me-3">
+                            <div>
+                                <h6 class="mb-0 fw-bold small">Bianca Putri</h6>
+                                <div class="text-warning extra-small">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="review-card p-4 h-100">
+                        <div class="quote-icon mb-3 text-secondary opacity-25">
+                            <i class="fa-solid fa-quote-left fs-1"></i>
+                        </div>
+                        <p class="review-text">"AUL-STORE beneran ngerubah cara saya berpakaian. Koleksinya sangat mudah di mix-and-match. Pengiriman ke Jakarta cuma sehari!"</p>
+                        <div class="d-flex align-items-center mt-4">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100" class="review-avatar me-3">
+                            <div>
+                                <h6 class="mb-0 fw-bold small">Riana Maheswari</h6>
+                                <div class="text-warning extra-small">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="review-card p-4 h-100">
+                        <div class="quote-icon mb-3 text-secondary opacity-25">
+                            <i class="fa-solid fa-quote-left fs-1"></i>
+                        </div>
+                        <p class="review-text">"CS-nya ramah banget bantu pilih size yang pas. Dress-nya cantik banget pas dateng, lebih bagus aslinya daripada di foto!"</p>
+                        <div class="d-flex align-items-center mt-4">
+                            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=100" class="review-avatar me-3">
+                            <div>
+                                <h6 class="mb-0 fw-bold small">Karin Nadila</h6>
+                                <div class="text-warning extra-small">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-black py-5 mt-5">
+        <div class="container">
+            <div class="row g-4 text-md-start text-center">
+                
+                <div class="col-md-4">
+                    <h2 class="serif fw-bold text-white mb-3">AUL-STORE</h2>
+                    <p class="small text-secondary pe-md-4">
+                    Destinasi fashion utama untuk koleksi timeless dan modern. Kami hadir untuk membantu Anda menemukan rasa percaya diri melalui gaya yang autentik.
+                    </p>
+                </div>
+
+                <div class="col-md-4">
+                    <h6 class="text-white text-uppercase fw-bold mb-3 small tracking-widest">Contact Us</h6>
+                    <ul class="list-unstyled small text-secondary">
+                        <li class="mb-2">
+                            <i class="fa-solid fa-location-dot me-2 text-white"></i> 
+                            Jl. Fashion Avenue No. 123, SCBD, Jakarta Selatan
+                        </li>
+                        <li class="mb-2">
+                            <i class="fa-solid fa-phone me-2 text-white"></i> 
+                            +62 21 5550 1234
+                        </li>
+                        <li class="mb-2">
+                            <i class="fa-solid fa-envelope me-2 text-white"></i> 
+                            hello@Aul-store.com
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <h6 class="text-white text-uppercase fw-bold mb-3 small tracking-widest">Follow Us</h6>
+                    <div class="d-flex justify-content-md-start justify-content-center gap-3 mb-4 fs-5">
+                        <a href="#" class="text-white opacity-75 hover-opacity-100"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="text-white opacity-75 hover-opacity-100"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" class="text-white opacity-75 hover-opacity-100"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="text-white opacity-75 hover-opacity-100"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                    <h6 class="text-white text-uppercase fw-bold mb-2 small tracking-widest">Newsletter</h6>
+                    <div class="input-group input-group-sm">
+                        <input type="text" class="form-control bg-dark border-secondary text-white" placeholder="Email Anda">
+                        <button class="btn btn-outline-light" type="button">JOIN</button>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="border-secondary opacity-25 my-4">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6 text-md-start text-center">
+                    <p class="text-secondary mb-0" style="font-size: 10px;">© 2026 AUL-STORE Indonesia. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

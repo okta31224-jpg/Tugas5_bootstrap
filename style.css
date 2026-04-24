@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-font: 'Inter', sans-serif;
+    --serif-font: 'Playfair Display', serif;
+}
+
+body {
+    font-family: var(--primary-font);
+    color: #1a1a1a;
+    padding-top: 80px;
+}
+
+.serif { font-family: var(--serif-font); }
+
+.top-bar {
+    background-color: #000;
+    letter-spacing: 0.15em;
+    font-size: 0.7rem;
+}
+
+#mainHeader {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  z-index: 1050;
+  transition: all 0.4s ease-in-out;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+#mainHeader.scrolled {
+  top: 0;
+  width: 100%;
+  border-radius: 0;
+}
+
+/* Navbar */
+.navbar-brand { letter-spacing: -1px; font-size: 1.5rem; }
+.nav-link:hover { color: #888 !important; }
+.badge-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: #000;
+    color: #fff;
+    font-size: 0.6rem;
+    padding: 2px 5px;
+    border-radius: 50%;
+}
+
+/* Hero */
+.hero-section {
+    margin-top: 0;
+    background-color: #f8f7f5;
+    min-height: 80vh;
+}
+.hero-img {
+    max-height: 600px;
+    object-fit: cover;
+}
+
+#btn-shop-new, #btn-explore {
+    transition: all 0.3s ease;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Efek saat ditekan */
+#btn-shop-new:active, #btn-explore:active {
+    transform: scale(0.92);
+}
+
+/* Warna hover khusus untuk Explore Collections */
+#btn-explore:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.feature-item {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    user-select: none; /* Mencegah teks ter-highlight saat diklik cepat */
+}
+
+.feature-item i {
+    font-size: 1.8rem;
+    color: #222;
+    transition: transform 0.3s ease;
+}
+
+/* Efek saat kursor mendekat */
+.feature-item:hover {
+    background-color: rgba(0,0,0,0.02);
+}
+
+.feature-item:hover i {
+    transform: translateY(-5px);
+    color: #555;
+}
+
+/* Efek klik (seperti membal) */
+.feature-item:active {
+    transform: scale(0.95);
+}
+
+.extra-small {
+    font-size: 0.7rem;
+    display: block;
+}
+
+/* Menghilangkan scrollbar tapi tetap bisa digeser */
+#category-container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+#category-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.category-item {
+    flex: 0 0 auto; /* Mencegah item mengecil */
+    width: 150px;   /* Ukuran lebar per item */
+}
+
+.category-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.category-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.category-circle:hover {
+    transform: scale(1.08);
+}
+
+.scroll-btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+/* Products */
+.product-card {
+    transition: box-shadow 0.3s;
+}
+.product-card:hover { box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+.wishlist-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    z-index: 10;
+}
+.extra-small { font-size: 0.65rem; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .display-3 { font-size: 2.5rem; }
+    .category-circle { width: 70px; height: 70px; }
+}
+
+/* Promo Cards */
+.bg-beige { background-color: #f2ede4; }
+.promo-card {
+    min-height: 400px;
+    position: relative;
+    border: none;
+}
+.promo-bg-img {
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    height: 80%;
+    object-fit: cover;
+    z-index: 0;
+}
+.z-10 { z-index: 10; position: relative; }
+
+/* Collections */
+.collection-item {
+    height: 450px;
+    transition: all 0.5s ease;
+}
+.collection-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.absolute-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.bg-gradient-dark {
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+}
+
+.review-card {
+    background: #fdfdfd;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+}
+
+/* Card yang di tengah dibuat berbeda agar menonjol */
+.active-card {
+    background: #000 !important;
+    color: #fff !important;
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    border: none;
+}
+
+.active-card .review-text {
+    color: #ddd !important;
+}
+
+.review-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 30px black;
+}
+
+.review-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+
+.review-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: black;
+}
+
+/* Warna abu-abu yang lebih terang agar terbaca di background hitam */
+.text-secondary {
+    color: #a0a0a0 !important;
+}
+
+/* Efek hover untuk ikon sosial media */
+.hover-opacity-100:hover {
+    opacity: 1 !important;
+    transform: translateY(-2px);
+    transition: 0.3s;
+}
+
+/* Membuat logo pembayaran lebih terlihat di background gelap */
+.grayscale-bright {
+    filter: brightness(0) invert(1); /* Mengubah logo berwarna menjadi putih polos agar elegan */
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.grayscale-bright:hover {
+    opacity: 1;
+}
+
+.tracking-widest {
+    letter-spacing: 2px;
+}
